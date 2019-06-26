@@ -2,7 +2,7 @@ import pygame, random
 pygame.init()
 class Ship(pygame.sprite.Sprite):
     def __init__(self, pos, size):
-        super().___init__()
+        super().__init__()
         self.image=pygame.image.load('ship.png')
         self.image=pygame.transform.smoothscale(self.image,(40,40))
         self.rect=self.image.get_rect()
@@ -13,5 +13,4 @@ class Ship(pygame.sprite.Sprite):
     def checkReset(self, endPos):
         return self.rect.center[0] > endPos
     def reset(self,pos):
-        self.rect.center=pos
-
+        self.rect.center = pos
